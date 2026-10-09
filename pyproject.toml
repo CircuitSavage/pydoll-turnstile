@@ -1,0 +1,46 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "pydoll-turnstile"
+version = "0.1.0"
+description = "Solve Cloudflare Turnstile in pydoll via the Peak API — read the sitekey, get a token, inject it. Async, for when pydoll still stalls on the widget."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "Peak" }]
+keywords = [
+    "pydoll",
+    "cloudflare",
+    "turnstile",
+    "captcha",
+    "solver",
+    "bypass",
+    "cf-clearance",
+    "scraping",
+    "automation",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Framework :: AsyncIO",
+    "Topic :: Internet :: WWW/HTTP :: Browsers",
+    "Topic :: Software Development :: Testing",
+]
+dependencies = []
+
+[project.optional-dependencies]
+pydoll = ["pydoll-python>=2.0"]
+
+[project.urls]
+Homepage = "https://peak.fo/?utm_source=github&utm_medium=readme&utm_campaign=packages&utm_content=pydoll-turnstile"
+Documentation = "https://peak.fo/docs/turnstile?utm_source=github&utm_medium=readme&utm_campaign=packages&utm_content=pydoll-turnstile"
+Pricing = "https://peak.fo/pricing?utm_source=github&utm_medium=readme&utm_campaign=packages&utm_content=pydoll-turnstile"
+Source = "https://github.com/CircuitSavage/pydoll-turnstile"
+
+[tool.hatch.build.targets.wheel]
+packages = ["pydoll_turnstile"]
